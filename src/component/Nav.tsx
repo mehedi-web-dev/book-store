@@ -5,7 +5,7 @@ const Nav = () => {
   return (
     <nav className=" sticky top-0 z-50 border-b border-base-200 bg-base-100/80 px-4 shadow-sm backdrop-blur-md lg:px-8">
       
-      <div className="navbar md:w-7xl md:mx-auto">
+      <div className="navbar container mx-auto">
 {/* Logo */}
       <div className="navbar-start">
         <h4 className=" px-2 text-xl font-bold tracking-tight">
