@@ -2,13 +2,19 @@ import React from "react";
 import BookCard from "./BookCard";
 import iBook from "@/app/type";
 
-const Booksdata = async () => {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER_BASE_URL}/booksData.json`);
-  if (!res.ok) {
-    throw new Error("Failed to fetch books data");
+const Booksdata = async (): Promise<iBook[]> => {
+  try {
+    const res = await fetch(
+      `${process.env.NEXT_PUBLIC_SERVER_BASE_URL}/booksData.json`
+    );
+
+    const data: iBook[] = await res.json();
+
+    return data;
+  } catch (error) {
+    console.log(error);
+    return [];
   }
-  const data: iBook[] = await res.json();
-  return data;
 };
 
 const Books = async () => {
