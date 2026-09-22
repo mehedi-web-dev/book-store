@@ -1,5 +1,6 @@
 import Image from "next/image";
 import iBook from "@/app/type";
+import Link from "next/link";
 
 export interface BookCardProps {
   book: iBook;
@@ -104,9 +105,9 @@ const BookCard = ({ book }: BookCardProps) => {
         </div>
 
         {/* View Details Button */}
-        <button className="btn btn-primary mt-5 w-full rounded-xl opacity-0 transition-all duration-300 group-hover:opacity-100">
+      <Link href={`/Books/${book.bookId}`}>  <button className="btn btn-primary mt-5 w-full rounded-xl opacity-0 transition-all duration-300 group-hover:opacity-100">
           View Details
-        </button>
+        </button></Link>
 
       </div>
     </div>

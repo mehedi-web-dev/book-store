@@ -1,9 +1,11 @@
 import React from "react";
-import BookCard from "./BookCard";
+
 import iBook from "@/app/type";
+import BookCard from "@/component/BookCard";
 
 const Booksdata = async () => {
   const res = await fetch("http://localhost:3000/booksData.json");
+
   if (!res.ok) {
     throw new Error("Failed to fetch books data");
   }
@@ -51,7 +53,7 @@ const Books = async () => {
 
         {/* Books Grid */}
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-          {books.slice(0,4).map((book: iBook) => (
+          {books.map((book: iBook) => (
             <BookCard
               key={book.bookId}
               book={book}

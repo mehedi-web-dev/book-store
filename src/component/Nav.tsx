@@ -1,7 +1,14 @@
 
+import Link from "next/link";
 import React from "react";
 
 const Nav = () => {
+  const links=<>
+  <li><Link href='/'>Home</Link></li>
+  <li><Link href='/Books'>Books</Link></li>
+  <li><Link href='/ListedBook'>ListedBook</Link></li>
+  <li><Link href='/ReadBook'>ReadBook</Link></li>
+  </>
   return (
     <nav className=" sticky top-0 z-50 border-b border-base-200 bg-base-100/80 px-4 shadow-sm backdrop-blur-md lg:px-8">
       
@@ -16,29 +23,7 @@ const Nav = () => {
       {/* Desktop Menu */}
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal gap-2 px-1 font-medium">
-          <li>
-            <a className="rounded-lg hover:bg-primary/10 hover:text-primary">
-              Home
-            </a>
-          </li>
-
-          <li>
-            <a className="rounded-lg hover:bg-primary/10 hover:text-primary">
-              Books
-            </a>
-          </li>
-
-          <li>
-            <a className="rounded-lg hover:bg-primary/10 hover:text-primary">
-              Categories
-            </a>
-          </li>
-
-          <li>
-            <a className="rounded-lg hover:bg-primary/10 hover:text-primary">
-              About
-            </a>
-          </li>
+        {links}
         </ul>
       </div>
       {/* Right Side */}
@@ -78,18 +63,7 @@ const Nav = () => {
             tabIndex={0}
             className="menu dropdown-content z-1 mt-3 w-52 rounded-2xl border border-base-200 bg-base-100 p-3 shadow-xl"
           >
-            <li>
-              <a>Home</a>
-            </li>
-            <li>
-              <a>Books</a>
-            </li>
-            <li>
-              <a>Categories</a>
-            </li>
-            <li>
-              <a>About</a>
-            </li>
+          {links}
             <li className="mt-2 border-t border-base-200 pt-2">
               <a>Sign in</a>
             </li>
