@@ -1,36 +1,176 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 📚 BookVibe — Online Book Store
 
-## Getting Started
+BookVibe is a modern and responsive book discovery and reading platform built with Next.js.  
+The website allows users to explore books, view detailed book information, manage their reading list, and keep track of books they want to read.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 📊 Project Overview
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+BookVibe is designed for book lovers who want a simple and clean platform to discover interesting books and organize their reading journey.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+The website includes a modern landing page, book collection, book details pages, reading-list functionality, and a dedicated read-book section.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 🌐 Live Project
 
-To learn more about Next.js, take a look at the following resources:
+👉 [BookVibe Live Website](https://book-store-lemon-rho.vercel.app/)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📸 Screenshot
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+![BookVibe Website Screenshot](./public/screenshot.png)
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## ✨ Key Features
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### 🧭 Navigation
+
+- Clean and minimal navigation bar
+- Home page
+- Books collection
+- Listed Books section
+- Read Books section
+- Sign In and Sign Up buttons
+
+### 🏠 Hero Section
+
+- Modern book-focused hero section
+- Featured book visual
+- Short introduction to the collection
+- "View The List" CTA
+- "Explore Categories" CTA
+
+### 📚 Book Collection
+
+- Display available books in a card-based layout
+- Book cover images
+- Book title and author
+- Book categories
+- Publication year
+- Rating information
+- Book availability count
+
+### 📖 Book Details
+
+- Individual book details page
+- Dynamic book routing
+- Detailed information about selected books
+- Easy navigation between the book collection and details
+
+### ❤️ Listed Books
+
+- Add books to a personal reading/listed collection
+- View saved books separately
+- Manage books that the user wants to read
+
+### 📕 Read Books
+
+- Dedicated section for books marked as read
+- Helps users keep track of their reading progress
+
+### 🔔 User Feedback
+
+- Toast notifications for user actions
+- Feedback when books are added or removed from lists
+
+### 📱 Modern UI
+
+- Clean and minimal interface
+- Card-based book layout
+- Modern typography
+- Purple/blue primary color scheme
+- Soft borders and subtle shadows
+- Responsive layout for different screen sizes
+
+### 📩 Footer
+
+- BookVibe branding
+- Website navigation links
+- Book categories
+- Contact information
+- Newsletter subscription section
+- Copyright information
+- Privacy Policy and Terms links
+
+---
+
+## 🛠️ Technologies Used
+
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS
+- JavaScript
+- JSON
+- React Context API
+- React Toastify
+- Vercel
+
+---
+
+## ⚙️ Main Concepts Implemented
+
+This project demonstrates several important Next.js and React concepts:
+
+- Next.js App Router
+- Dynamic Routes
+- Server Components
+- Client Components
+- TypeScript Interfaces
+- Async/Await
+- Fetch API
+- Environment Variables
+- React Context API
+- State Management
+- Dynamic Book Data
+- Conditional Rendering
+- Reusable Components
+- Responsive UI Design
+
+---
+
+## 📂 Project Structure
+
+```text
+BookVibe/
+│
+├── public/
+│   ├── booksData.json
+│   └── images/
+│
+├── src/
+│   └── app/
+│       │
+│       ├── components/
+│       │   ├── Navbar/
+│       │   ├── Footer/
+│       │   └── ...
+│       │
+│       ├── context/
+│       │   └── bookContext.tsx
+│       │
+│       ├── books/
+│       │   └── page.tsx
+│       │
+│       ├── book/
+│       │   └── [id]/
+│       │       └── page.tsx
+│       │
+│       ├── ListedBook/
+│       │   └── page.tsx
+│       │
+│       ├── ReadBook/
+│       │   └── page.tsx
+│       │
+│       ├── type.ts
+│       ├── page.tsx
+│       ├── layout.tsx
+│       └── globals.css
+│
+├── .env.local
+├── package.json
+├── next.config.ts
+├── tsconfig.json
+└── README.md
